@@ -1,4 +1,4 @@
-use crate::error_template::{AppError};
+use crate::error_template::AppError;
 use crate::pages::*;
 use crate::components::{Header, Footer};
 
