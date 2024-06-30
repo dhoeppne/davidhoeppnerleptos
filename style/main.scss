@@ -3,28 +3,27 @@ html, body {
 	margin: 0;
 }
 
-main {
+body {
 	display: flex;
-	background-color: #ffffff;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-header {
-	background-color: #2286dd;
-	width: 100%;
-	position: absolute;
-	top: 0;
+main, footer, header {
+	background-color: #09192F;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #8892B0;
 }
 
-footer {
-	bottom: 0;
-	width: 100%;
-	position: absolute;
-	background-color: #2286dd;
-	color: white;
-	text-align: center;
-	padding: 10px;
+a {
+	color: #48BAA5;
 }
+
+main {
+	overflow-y: scroll;
+	flex: auto;
+}
+
+header, footer {
+	flex: none;
+}
+
