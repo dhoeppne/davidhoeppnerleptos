@@ -5,19 +5,15 @@ use crate::components::ExternalLink;
 #[component]
 pub fn Projects() -> impl IntoView {
     view! {
-      <div>
-        <h2> "Some Things I’ve Built" </h2>
-        <p> "put some projects here in for loop or something" </p>
-      </div>
+      <h2> "Some Things I’ve Built" </h2>
+      <p> "put some projects here in for loop or something" </p>
     }
 }
 
 #[component]
 pub fn Work() -> impl IntoView{
     view! {
-      <div>
-        "Work"
-      </div>
+      "Work"
     }
 }
 
@@ -25,11 +21,9 @@ pub fn Work() -> impl IntoView{
 pub fn Contact() -> impl IntoView{
   let email = "email@davidhoeppner.ca";
   view! {
-    <div>
-      <h2> "Get in Touch" </h2>
-      <p> "I currently work at Workday as a Software Engineer in Vancouver, Canada as a part of the Search team. Don't hesitate to reach out to me if you have any questions or just want to say hi!" </p>
-      <ExternalLink link_to=format!("mailto:{email}") text="Say Hello"/>
-    </div>
+    <h2> "Get in Touch" </h2>
+    <p> "I currently work at Workday as a Software Engineer in Vancouver, Canada as a part of the Search team. Don't hesitate to reach out to me if you have any questions or just want to say hi!" </p>
+    <ExternalLink link_to=format!("mailto:{email}") text="Say Hello"/>
   }
 }
 
@@ -66,29 +60,25 @@ pub fn Home() -> impl IntoView {
   ];
 
   view! {
-    <div>
-      { first }
-      { second }
-      { third }
-      { fourth }
-    </div>
-    <div>
-      <p>
-        "Hello! My name is David and I enjoy creating things that create other things. I had a meager start to web development back in 2013 when I experimented with editing some Tumblr themes, but I really started to get involved in 2018 when I interned for Intuit in Edmonton. Working on the QuickBooks Online devops team gave me a kickstart into tooling and operations."
-      </p>
-      <p>
-        "Fast-forward to today, and I've had the privilege of working at "
-        <ExternalLink link_to="https://www.intuit.com/" text="Intuit"/>
-        " for 5 years, both as an intern and full time engineer. I currently work on the AppFabric Team, which provides cross-app support for 100s of Intuit applications, including QuickBooks Online, TurboTax Online,and Mint."
-      </p>
-      <p>
-        "Here are a few technologies I've been working with recently:"
-      </p>
-      <ul>
-        {skills.into_iter()
-          .map(|skill| view! {<li>{skill}</li>})
-          .collect_view()}
-      </ul>
-    </div>
+    { first }
+    { second }
+    { third }
+    { fourth }
+    <p>
+      "Hello! My name is David and I enjoy creating things that create other things. I had a meager start to web development back in 2013 when I experimented with editing some Tumblr themes, but I really started to get involved in 2018 when I interned for Intuit in Edmonton. Working on the QuickBooks Online devops team gave me a kickstart into tooling and operations."
+    </p>
+    <p>
+      "Fast-forward to today, and I've had the privilege of working at "
+      <ExternalLink link_to="https://www.intuit.com/" text="Intuit"/>
+      " for 5 years, both as an intern and full time engineer. I currently work on the AppFabric Team, which provides cross-app support for 100s of Intuit applications, including QuickBooks Online, TurboTax Online,and Mint."
+    </p>
+    <p>
+      "Here are a few technologies I've been working with recently:"
+    </p>
+    <ul>
+      {skills.into_iter()
+        .map(|skill| view! {<li>{skill}</li>})
+        .collect_view()}
+    </ul>
   }
 }
