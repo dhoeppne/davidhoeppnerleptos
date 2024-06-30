@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-	display: flex;
+	display: grid;
 	flex-direction: column;
 }
 
@@ -25,4 +25,14 @@ main {
 
 header, footer {
 	flex: none;
+}
+
+header li {
+	display: inline-block; /* Displays list items inline */
+	margin-right: 20px; /* Adds some space between the list items */
+}
+
+header ul {
+	list-style-type: none;
+	justify-content: right;;
 }
