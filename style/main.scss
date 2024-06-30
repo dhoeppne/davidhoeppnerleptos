@@ -1,4 +1,30 @@
-body {
-	font-family: sans-serif;
+html, body {
+	height: 100vh;
+	margin: 0;
+}
+
+main {
+	display: flex;
+	background-color: #ffffff;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header {
+	background-color: #2286dd;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+footer {
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+	background-color: #2286dd;
+	color: white;
 	text-align: center;
+	padding: 10px;
 }
