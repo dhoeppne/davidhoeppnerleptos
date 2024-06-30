@@ -19,7 +19,7 @@ WORKDIR /app
 COPY . .
 
 # Build the app
-RUN cargo leptos build --release -vv
+RUN cargo leptos build --release - -P
 
 FROM --platform=linux/amd64 debian:bookworm-slim as runtime
 WORKDIR /app
