@@ -1,4 +1,4 @@
-use crate::error_template::{AppError, ErrorTemplate};
+use crate::error_template::{AppError};
 use crate::pages::*;
 use crate::components::{Header, Footer};
 
@@ -26,7 +26,7 @@ pub fn App() -> impl IntoView {
             let mut outside_errors = Errors::default();
             outside_errors.insert_with_default_key(AppError::NotFound);
             view! {
-                <ErrorTemplate outside_errors/>
+                <PageNotFound/>
             }
             .into_view()
         }>
@@ -37,7 +37,6 @@ pub fn App() -> impl IntoView {
                     <Route path="/projects" view=Projects/>
                     <Route path="/contact" view=Contact/>
                     <Route path="/work" view=Work/>
-                    <Route path="/*any" view=PageNotFound/>
                 </Routes>
             </main>
             <Footer/>
